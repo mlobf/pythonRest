@@ -2,9 +2,7 @@ import requests
 
 
 def main():
-    """
-    docstring
-    """
+
     payload = {"base": "USD", "symbols": "GBP"}
     response = requests.get("https://api.exchangeratesapi.io/latest", params=payload)
 
@@ -13,9 +11,9 @@ def main():
         raise Exception("There was a error!")
 
     print("Status Code: ", response.status_code)
-    #print("-----------+++---------------")
-    #print("Headers: ", response.headers["Content-Type"])
-    #print("Content: ", response.text)
+    # print("-----------+++---------------")
+    # print("Headers: ", response.headers["Content-Type"])
+    # print("Content: ", response.text)
     print("-----------+++---------------")
     print("Now its time to return some Json file.....")
     data = response.json()
